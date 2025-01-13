@@ -5,6 +5,7 @@ import {USERS_SOURCE_NAME} from "../constants/sourceNames";
 import {UsersList} from "../components/Users/UsersList/UsersList";
 import {UsersShow} from "../components/Users/UsersShow/UsersShow";
 import {UsersCreate} from "../components/Users/UsersCreate/UsersCreate";
+import {UsersEdit} from "../components/Users/UsersEdit/UsersEdit";
 
 export const App = () => (
     <Admin
@@ -21,6 +22,7 @@ export const App = () => (
             list={UsersList}
             show={UsersShow}
             create={UsersCreate}
+            edit={UsersEdit}
         />
     </Admin>
 );

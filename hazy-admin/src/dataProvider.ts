@@ -1,7 +1,10 @@
-import {DataProvider, fetchUtils} from 'react-admin';
+import {DataProvider, HttpError, fetchUtils} from 'react-admin';
 import {stringify} from 'query-string';
-import axios from 'axios';
 import api from '../api/apiInstance'
+import { USERS_SOURCE_NAME } from '../constants/sourceNames';
+import {IUser} from "../types/users";
+import {getCreatedUser, getUpdatedUser} from "../utils/dataProvider";
+import {CLIENT_ERROR_CODE} from "../constants/statuseCodes";
 
 const httpClient = fetchUtils.fetchJson
 
@@ -54,11 +57,24 @@ export default {
         const {json, headers} = await httpClient(url);
         return {
             data: json,
-            total: parseInt(headers.get('content-range').split('/').pop(), 10),
+            total: parseInt(headers.get('content-range').split('/').pop(), 10 ),
         };
     },
 
     create: async (resource, params) => {
+        if (resource === USERS_SOURCE_NAME) {
+            const user = await getCreatedUser(params.data as IUser)
+
+            if (user.status === CLIENT_ERROR_CODE) {
+                return Promise.reject(new HttpError(user.message, CLIENT_ERROR_CODE));
+            }
+
+            return {
+                data: user.newUser,
+            }
+        }
+
+
         const {json} = await httpClient(`/${resource}`, {
             method: 'POST',
             body: JSON.stringify(params.data),
@@ -67,6 +83,18 @@ export default {
     },
 
     update: async (resource, params) => {
+        if (resource === USERS_SOURCE_NAME) {
+            const user = await getUpdatedUser(params.data as IUser)
+
+            if (user.status === CLIENT_ERROR_CODE) {
+                return Promise.reject(new HttpError(user.message, CLIENT_ERROR_CODE));
+            }
+
+            return {
+                data: user.updatedUser,
+            }
+        }
+
         const url = `/${resource}/${params.id}`;
         const {json} = await httpClient(url, {
             method: 'PUT',

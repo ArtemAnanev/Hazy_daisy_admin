@@ -1,8 +1,12 @@
 import React from "react";
-import {Show, SimpleShowLayout, TextField, DeleteButton, ImageField, TopToolbar} from 'react-admin'
+import {Show, SimpleShowLayout, TextField, DeleteButton, ImageField, TopToolbar, EditButton} from 'react-admin'
 
 export const UsersShow = () => (
-    <Show actions={<TopToolbar><DeleteButton /></TopToolbar>}>
+    <Show actions={
+        <TopToolbar>
+            <EditButton />
+            <DeleteButton />
+        </TopToolbar>}>
         <SimpleShowLayout>
             <ImageField source='image.url' title='image.desc' />
             <TextField source='name' />
