@@ -1,10 +1,10 @@
-import {IUser} from "../types/users";
 import api from '../api/apiInstance'
+import { IUser } from '../types/users'
 
 export const convertImageToDataUrl = async (src: string, title: string) => {
     const imgBlob = await fetch(src).then((result) => result.blob())
     const dataUrl = await new Promise((resolve) => {
-        let reader = new FileReader();
+        let reader = new FileReader()
 
         reader.onload = () => resolve(reader.result)
         reader.readAsDataURL(imgBlob)
@@ -16,6 +16,12 @@ export const convertImageToDataUrl = async (src: string, title: string) => {
     }
 }
 
+export const getImagesFromRawFile = (imgs: IUser['image'][]) =>
+    Promise.all(
+        imgs.map(async (img) => await convertImageToDataUrl(img.src, img.title))
+    )
+
+
 export const getCreatedUser = async (user: IUser) => {
     let image: unknown
 
@@ -25,7 +31,7 @@ export const getCreatedUser = async (user: IUser) => {
         image = await convertImageToDataUrl(img.src, img.title)
     }
 
-    const {data} = await api.post('/admin/add-user', {
+    const { data } = await api.post('/admin/add-user', {
         ...user,
         image,
     })
@@ -42,7 +48,7 @@ export const getUpdatedUser = async (user: IUser) => {
         image = await convertImageToDataUrl(img.src, img.title)
     }
 
-    const {data} = await api.post('/admin/edit-user', {
+    const { data } = await api.post('/admin/edit-user', {
         ...user,
         image,
     })

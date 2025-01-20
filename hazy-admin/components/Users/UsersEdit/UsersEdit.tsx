@@ -48,7 +48,7 @@ export const UsersEdit = () => {
                 onClick={handleInitializePasswordRestore}
                 disabled={spinner}
             >
-                {spinner ? <>Инициализация</> : <>ИнициироватЬ сброс пароля</>}
+                {spinner ? <>Инициализация...</> : <>ИнициироватЬ сброс пароля</>}
             </Button>
         )
     }, [

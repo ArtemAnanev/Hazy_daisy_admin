@@ -1,10 +1,11 @@
-import {DataProvider, HttpError, fetchUtils} from 'react-admin';
+import {DataProvider, fetchUtils, HttpError} from 'react-admin';
 import {stringify} from 'query-string';
 import api from '../api/apiInstance'
-import { USERS_SOURCE_NAME } from '../constants/sourceNames';
+import {USERS_SOURCE_NAME} from '../constants/sourceNames';
 import {IUser} from "../types/users";
-import {getCreatedUser, getUpdatedUser} from "../utils/dataProvider";
+import {getCreatedUser, getImagesFromRawFile, getUpdatedUser} from "../utils/dataProvider";
 import {CLIENT_ERROR_CODE} from "../constants/statuseCodes";
+import {SIZES_LIST} from "../constants/goods";
 
 const httpClient = fetchUtils.fetchJson
 
@@ -17,7 +18,7 @@ export default {
             range: JSON.stringify([(page - 1) * perPage, page * perPage - 1]),
             filter: JSON.stringify(params.filter),
         };
-        const { data } = await api.get(`/admin/${resource}?${stringify(query)}`)
+        const {data} = await api.get(`/admin/${resource}?${stringify(query)}`)
         console.log(data)
         return {
             data: data.items,
@@ -57,7 +58,8 @@ export default {
         const {json, headers} = await httpClient(url);
         return {
             data: json,
-            total: parseInt(headers.get('content-range').split('/').pop(), 10 ),
+            total: 0,
+                // parseInt(headers.get('content-range').split('/').pop(), 10),
         };
     },
 
@@ -74,12 +76,36 @@ export default {
             }
         }
 
+        const sizes = {} as { [index: string]: string };
+        let newImages = null
 
-        const {json} = await httpClient(`/${resource}`, {
-            method: 'POST',
-            body: JSON.stringify(params.data),
+        if (params.data.images.every((img: IUser['image']) => img.src)) {
+            newImages = await getImagesFromRawFile(params.data.images);
+        }
+
+        if (params.data.sizes) {
+            SIZES_LIST.forEach(
+                (size) => sizes[size] = params.data.sizes.includes(size));
+        }
+
+        const {data} = await api.post(`/admin/add-product`, {
+            ...params.data,
+            category: resource,
+            _id: params.data.id,
+            sizes,
+            images: newImages || params.data.images,
+            isNew: !!params.data.isNew?.length,
+            isBestseller: !!params.data.isBestseller?.length,
+
         })
-        return {data: json};
+        return {
+            data: {
+                ...data.newItem,
+                sizes: params.data.sizes,
+                isNew: params.data.isNew,
+                isBestseller: params.data.isBestseller,
+            }
+        };
     },
 
     update: async (resource, params) => {
