@@ -8,6 +8,8 @@ import {UsersCreate} from "../components/Users/UsersCreate/UsersCreate";
 import {UsersEdit} from "../components/Users/UsersEdit/UsersEdit";
 import {GoodsList} from "../components/GoodsList/GoodsList";
 import {ClothesCreate} from "../components/Clothes/ClothesCreate/ClothesCreate";
+import {ProductShow} from "../components/ProductShow/ProductShow";
+import {ClothesEdit} from "../components/Clothes/ClothesEdit/ClothesEdit";
 
 export const App = () => (
     <Admin
@@ -30,6 +32,8 @@ export const App = () => (
             name={CLOTHES_SOURCE_NAME}
             list={GoodsList}
             create={ClothesCreate}
+            show={ProductShow}
+            edit={ClothesEdit}
         />
     </Admin>
 );
