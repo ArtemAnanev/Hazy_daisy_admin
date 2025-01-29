@@ -5,21 +5,21 @@ export const CLOTHES_TYPES = [
     {id: 4, name: 'outerwear'},
 ]
 
-export const ACCESSORIES = [
+export const ACCESSORIES_TYPES = [
     {id: 1, name: 'bags'},
     {id: 2, name: 'headdress'},
     {id: 3, name: 'umbrella'},
 ]
-
-export const OFFICE_TYPES = [
-    {id: 1, name: 'notebook'},
-    {id: 2, name: 'pen'},
-]
-
-export const SOUVENIRS_TYPES = [
-    {id: 1, name: 'promotional-souvenirs'},
-    {id: 2, name: 'business-souvenirs'},
-]
+//
+// export const OFFICE_TYPES = [
+//     {id: 1, name: 'notebook'},
+//     {id: 2, name: 'pen'},
+// ]
+//
+// export const SOUVENIRS_TYPES = [
+//     {id: 1, name: 'promotional-souvenirs'},
+//     {id: 2, name: 'business-souvenirs'},
+// ]
 
 export const GOODS_POPULARITY = [
     {id: 1, name: 300},
