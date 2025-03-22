@@ -1,9 +1,8 @@
 export const GOODS_COLORS = [
-    { id: 1, name: 'purple' },
-    { id: 2, name: 'yellow' },
-    { id: 3, name: 'orange' },
-    { id: 4, name: 'black' },
-    { id: 5, name: 'white' },
+    { id: 1, name: 'пудровая' },
+    { id: 2, name: 'мятная' },
+    { id: 3, name: 'графит' },
+    { id: 4, name: 'бежевая' },
 ]
 
 export const GOODS_COLLARS = [

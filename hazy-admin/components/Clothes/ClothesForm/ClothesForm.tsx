@@ -22,6 +22,7 @@ import {HoodieCharacteristics} from "../HoodieCharacteristics/HoodieCharacterist
 import {LongSleevesCharacteristics} from "../LongSleevesCharacteristics/LongSleevesCharacteristics";
 import {OuterwearCharacteristics} from "../OuterwearCharacteristics/OuterwearCharacteristics";
 import {TShirtsCharacteristics} from "../TShirtsCharacteristics/TShirtsCharacteristics";
+import {SIZES_LIST} from "../../../constants/goods";
 
 
 export const ClothesForm = ({type, handleSelectType, maxImagesCount}: IBaseFormProps) => (
@@ -70,9 +71,9 @@ export const ClothesForm = ({type, handleSelectType, maxImagesCount}: IBaseFormP
                     validate={[required()]}
                     optionValue='name'
                 />
-                <CheckboxGroupInput
+                <SelectInput
                     source='sizes'
-                    choices={GOODS_SIZES}
+                    choices={SIZES_LIST}
                     optionValue='name'
                 />
                 <CheckboxGroupInput
