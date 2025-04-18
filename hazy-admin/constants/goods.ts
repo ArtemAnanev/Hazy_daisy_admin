@@ -5,3 +5,10 @@ export const SIZES_LIST = [
     '158', '134', '140', '146', '152',
     '42-46', '46-50', '50-54', '54-58',
 ]
+
+export const ADULT_SIZES_LIST = [
+    {id: 1, name: '42-46'},
+    {id: 1, name: '46-50'},
+    {id: 1, name: '50-54'},
+    {id: 1, name: '54-58'},
+]
