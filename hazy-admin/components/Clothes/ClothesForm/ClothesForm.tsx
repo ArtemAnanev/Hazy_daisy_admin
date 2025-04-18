@@ -16,7 +16,6 @@ import {
     GOODS_POPULARITY,
     GOODS_SIZES
 } from "../../../constants/goodsTypes";
-import {allowedImageExtension, allowedImageExtensions} from "../../../utils/validation";
 import '../index.css'
 import {HoodieCharacteristics} from "../HoodieCharacteristics/HoodieCharacteristics";
 import {LongSleevesCharacteristics} from "../LongSleevesCharacteristics/LongSleevesCharacteristics";
