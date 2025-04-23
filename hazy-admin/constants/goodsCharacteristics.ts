@@ -5,6 +5,7 @@ export const GOODS_COLORS = [
     { id: 4, name: 'бежевая' },
 ]
 
+//Вырезы горловины
 export const GOODS_COLLARS = [
     { id: 1, name: 'polo' },
     { id: 2, name: 'shirt-rack' },
@@ -14,6 +15,7 @@ export const GOODS_COLLARS = [
     { id: 6, name: 'apache' },
 ]
 
+// Покрой
 export const GOODS_SILHOUETTE = [
     { id: 1, name: 'slim fit' },
     { id: 2, name: 'oversized' },
@@ -32,20 +34,22 @@ export const GOODS_PRINT = [
     { id: 6, name: 'lines' },
 ]
 
+// Декоративные элементы
 export const GOODS_DECORS = [
-    { id: 1, name: 'printed' },
-    { id: 2, name: 'embroidered' },
-    { id: 3, name: 'graphic' },
-    { id: 4, name: 'plain' },
-    { id: 5, name: 'tie-dye' },
+    { id: 1, name: 'Надпись' },
+    { id: 2, name: 'Вышивка' },
+    { id: 3, name: 'Рисунок' },
+    { id: 4, name: 'Одноцветная' },
+    { id: 5, name: 'В стиле тай-дай' },
 ]
 
+// Состав
 export const GOODS_COMPOSITIONS = [
-    { id: 1, name: '100% Cotton' },
-    { id: 2, name: 'polyester blend' },
-    { id: 3, name: '95% cotton, 5% spandex' },
-    { id: 4, name: '100% Linen' },
-    { id: 5, name: 'organic Cotton' },
+    { id: 1, name: '100% Хлопок' },
+    { id: 2, name: 'Полиэстер' },
+    { id: 3, name: '95% хлопок , 5% лайкра' },
+    { id: 4, name: '100% Лён' },
+    { id: 5, name: 'Органический хлопок' },
 ]
 
 export const GOODS_SEASONS = [
@@ -168,74 +172,74 @@ export const UMBRELLA_MECHANISMS = [
     { id: 5, name: 'dual-layer automatic' },
 ]
 
-export const PEN_TYPES = [
-    { id: 1, name: 'ballpoint' },
-    { id: 2, name: 'fountain' },
-    { id: 3, name: 'gel' },
-    { id: 4, name: 'roller ball' },
-    { id: 5, name: 'stylus' },
-]
-
-export const PEN_PECULIARITIES = [
-    { id: 1, name: 'retractable' },
-    { id: 2, name: 'erasable' },
-    { id: 3, name: 'refillable' },
-    { id: 4, name: 'multi-color' },
-    { id: 5, name: 'pocket clip' },
-]
-
-export const PEN_FRAMES = [
-    { id: 1, name: 'plastic' },
-    { id: 2, name: 'metal' },
-    { id: 3, name: 'wood' },
-    { id: 4, name: 'carbon fiber' },
-    { id: 5, name: 'rubber' },
-]
-
-export const NOTEBOOK_COVERS = [
-    { id: 1, name: 'hardcover' },
-    { id: 2, name: 'softcover' },
-    { id: 3, name: 'leather' },
-    { id: 4, name: 'fabric' },
-    { id: 5, name: 'plastic' },
-]
-
-export const NOTEBOOK_FASTENINGS = [
-    { id: 1, name: 'elastic band' },
-    { id: 2, name: 'snap' },
-    { id: 3, name: 'magnetic' },
-    { id: 4, name: 'ribbon' },
-    { id: 5, name: 'zipper' },
-]
-
-export const NOTEBOOK_RULED = [
-    { id: 1, name: 'ruled' },
-    { id: 2, name: 'dotted' },
-    { id: 3, name: 'grid' },
-    { id: 4, name: 'plain' },
-    { id: 5, name: 'lined' },
-]
-
-export const SOUVENIR_MATERIALS = [
-    { id: 1, name: 'wood' },
-    { id: 2, name: 'metal' },
-    { id: 3, name: 'glass' },
-    { id: 4, name: 'ceramic' },
-    { id: 5, name: 'plastic' },
-]
-
-export const SOUVENIR_HEIGHTS = [
-    { id: 1, name: '5 cm' },
-    { id: 2, name: '10 cm' },
-    { id: 3, name: '15 cm' },
-    { id: 4, name: '20 cm' },
-    { id: 5, name: '25 cm' },
-]
-
-export const SOUVENIR_WEIGHTS = [
-    { id: 1, name: '50 g' },
-    { id: 2, name: '100 g' },
-    { id: 3, name: '150 g' },
-    { id: 4, name: '200 g' },
-    { id: 5, name: '250 g' },
-]
+// export const PEN_TYPES = [
+//     { id: 1, name: 'ballpoint' },
+//     { id: 2, name: 'fountain' },
+//     { id: 3, name: 'gel' },
+//     { id: 4, name: 'roller ball' },
+//     { id: 5, name: 'stylus' },
+// ]
+//
+// export const PEN_PECULIARITIES = [
+//     { id: 1, name: 'retractable' },
+//     { id: 2, name: 'erasable' },
+//     { id: 3, name: 'refillable' },
+//     { id: 4, name: 'multi-color' },
+//     { id: 5, name: 'pocket clip' },
+// ]
+//
+// export const PEN_FRAMES = [
+//     { id: 1, name: 'plastic' },
+//     { id: 2, name: 'metal' },
+//     { id: 3, name: 'wood' },
+//     { id: 4, name: 'carbon fiber' },
+//     { id: 5, name: 'rubber' },
+// ]
+//
+// export const NOTEBOOK_COVERS = [
+//     { id: 1, name: 'hardcover' },
+//     { id: 2, name: 'softcover' },
+//     { id: 3, name: 'leather' },
+//     { id: 4, name: 'fabric' },
+//     { id: 5, name: 'plastic' },
+// ]
+//
+// export const NOTEBOOK_FASTENINGS = [
+//     { id: 1, name: 'elastic band' },
+//     { id: 2, name: 'snap' },
+//     { id: 3, name: 'magnetic' },
+//     { id: 4, name: 'ribbon' },
+//     { id: 5, name: 'zipper' },
+// ]
+//
+// export const NOTEBOOK_RULED = [
+//     { id: 1, name: 'ruled' },
+//     { id: 2, name: 'dotted' },
+//     { id: 3, name: 'grid' },
+//     { id: 4, name: 'plain' },
+//     { id: 5, name: 'lined' },
+// ]
+//
+// export const SOUVENIR_MATERIALS = [
+//     { id: 1, name: 'wood' },
+//     { id: 2, name: 'metal' },
+//     { id: 3, name: 'glass' },
+//     { id: 4, name: 'ceramic' },
+//     { id: 5, name: 'plastic' },
+// ]
+//
+// export const SOUVENIR_HEIGHTS = [
+//     { id: 1, name: '5 cm' },
+//     { id: 2, name: '10 cm' },
+//     { id: 3, name: '15 cm' },
+//     { id: 4, name: '20 cm' },
+//     { id: 5, name: '25 cm' },
+// ]
+//
+// export const SOUVENIR_WEIGHTS = [
+//     { id: 1, name: '50 g' },
+//     { id: 2, name: '100 g' },
+//     { id: 3, name: '150 g' },
+//     { id: 4, name: '200 g' },
+//     { id: 5, name: '250 g' },
+// ]

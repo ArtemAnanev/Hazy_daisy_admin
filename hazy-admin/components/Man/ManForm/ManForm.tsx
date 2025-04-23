@@ -11,6 +11,10 @@ import {
 import {IBaseFormProps} from "../../../types/goods";
 import {CLOTHES_TYPES, GOODS_IS_BESTSELLER, GOODS_IS_NEW} from "../../../constants/goodsTypes";
 import {ADULT_SIZES_LIST} from "../../../constants/goods";
+import {TShirtsCharacteristics} from "../../Clothes/TShirtsCharacteristics/TShirtsCharacteristics";
+import {LongSleevesCharacteristics} from "../../Clothes/LongSleevesCharacteristics/LongSleevesCharacteristics";
+import {HoodieCharacteristics} from "../../Clothes/HoodieCharacteristics/HoodieCharacteristics";
+import {OuterwearCharacteristics} from "../../Clothes/OuterwearCharacteristics/OuterwearCharacteristics";
 
 export const ManForm = ({type, handleSelectType, maxImagesCount}: IBaseFormProps) => (
     <TabbedForm>
@@ -88,7 +92,10 @@ export const ManForm = ({type, handleSelectType, maxImagesCount}: IBaseFormProps
             </ImageInput>.
         </TabbedForm.Tab>
         <TabbedForm.Tab label='Характеристики'>
-
+            {type === CLOTHES_TYPES[0].name && <TShirtsCharacteristics/>}
+            {type === CLOTHES_TYPES[1].name && <LongSleevesCharacteristics/>}
+            {type === CLOTHES_TYPES[2].name && <HoodieCharacteristics/>}
+            {type === CLOTHES_TYPES[3].name && <OuterwearCharacteristics/>}
         </TabbedForm.Tab>
     </TabbedForm>
 )
