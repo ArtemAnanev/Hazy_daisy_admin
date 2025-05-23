@@ -58,7 +58,7 @@ export const ManForm = ({type, handleSelectType, maxImagesCount}: IBaseFormProps
                     resettable
                 />
             </div>
-            <div className="block-rightq">
+            <div className="block-right">
                 <SelectInput
                     source='sizes'
                     label='Размер'
