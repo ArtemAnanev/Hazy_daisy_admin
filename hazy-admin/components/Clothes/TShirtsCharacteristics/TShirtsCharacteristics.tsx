@@ -18,6 +18,7 @@ export const TShirtsCharacteristics = () => (
         <div className='block'>
             <SelectInput
                 className='block__select'
+                label='Цвет товара'
                 choices={GOODS_COLORS}
                 source='characteristics.color'
                 validate={[required()]}
@@ -27,6 +28,7 @@ export const TShirtsCharacteristics = () => (
             <SelectInput
                 className='block__select'
                 // choices={GOODS_COLLARS}
+                label='Вырезы горловины'
                 choices={NECKLINE}
                 source='characteristics.collar'
                 validate={[required()]}
@@ -35,6 +37,7 @@ export const TShirtsCharacteristics = () => (
             />
             <SelectInput
                 className='block__select'
+                label='Покрой'
                 choices={GOODS_SILHOUETTE}
                 source='characteristics.silhouette'
                 validate={[required()]}
@@ -43,6 +46,7 @@ export const TShirtsCharacteristics = () => (
             />
             <SelectInput
                 className='block__select'
+                label='Цвет принта'
                 choices={GOODS_PRINT}
                 source='characteristics.print'
                 validate={[required()]}
@@ -53,6 +57,7 @@ export const TShirtsCharacteristics = () => (
         <div className='block'>
             <SelectInput
                 className='block__select'
+                label='Декоративные элементы'
                 choices={GOODS_DECORS}
                 source='characteristics.decor'
                 validate={[required()]}
@@ -61,6 +66,7 @@ export const TShirtsCharacteristics = () => (
             />
             <SelectInput
                 className='block__select'
+                label='Состав'
                 choices={GOODS_COMPOSITIONS}
                 source='characteristics.composition'
                 validate={[required()]}
@@ -69,20 +75,13 @@ export const TShirtsCharacteristics = () => (
             />
             <SelectInput
                 className='block__select'
+                label='Сезон'
                 choices={GOODS_SEASONS}
                 source='characteristics.season'
                 validate={[required()]}
                 defaultValue={GOODS_SEASONS[0].name}
                 optionValue='name'
             />
-            {/*<SelectInput*/}
-            {/*    className='block__select'*/}
-            {/*    choices={GOODS_COLLECTIONS}*/}
-            {/*    source='characteristics.collection'*/}
-            {/*    validate={[required()]}*/}
-            {/*    defaultValue={GOODS_COLLECTIONS[0].name}*/}
-            {/*    optionValue='name'*/}
-            {/*/>*/}
         </div>
     </>
 )

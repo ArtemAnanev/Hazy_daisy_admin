@@ -62,7 +62,7 @@ export const WomenForm = ({type, handleSelectType, maxImagesCount}: IBaseFormPro
                  <SelectInput
                      source='sizes'
                      label='Размер'
-                     choices={SIZES_LIST}
+                     choices={ADULT_SIZES_LIST}
                      optionValue='name'
                  />
                  <CheckboxGroupInput

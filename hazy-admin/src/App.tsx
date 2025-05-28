@@ -41,20 +41,20 @@ export const App = () => (
             create={UsersCreate}
             edit={UsersEdit}
         />
-        <Resource
-            name={CLOTHES_SOURCE_NAME}
-            list={GoodsList}
-            create={ClothesCreate}
-            show={ProductShow}
-            edit={ClothesEdit}
-        />
-        <Resource
-            name={ACCESSORIES_SOURCE_NAME}
-            list={GoodsList}
-            create={AccessoryCreate}
-            show={ProductShow}
-            edit={AccessoryEdit}
-        />
+        {/*<Resource*/}
+        {/*    name={CLOTHES_SOURCE_NAME}*/}
+        {/*    list={GoodsList}*/}
+        {/*    create={ClothesCreate}*/}
+        {/*    show={ProductShow}*/}
+        {/*    edit={ClothesEdit}*/}
+        {/*/>*/}
+        {/*<Resource*/}
+        {/*    name={ACCESSORIES_SOURCE_NAME}*/}
+        {/*    list={GoodsList}*/}
+        {/*    create={AccessoryCreate}*/}
+        {/*    show={ProductShow}*/}
+        {/*    edit={AccessoryEdit}*/}
+        {/*/>*/}
         <Resource
             name={MAN_SOURCE_NAME}
             list={GoodsList}

@@ -53,11 +53,11 @@ export const GOODS_COMPOSITIONS = [
 ]
 
 export const GOODS_SEASONS = [
-    { id: 1, name: 'summer' },
-    { id: 2, name: 'winter' },
-    { id: 3, name: 'spring' },
-    { id: 4, name: 'fall' },
-    { id: 5, name: 'all-season' },
+    { id: 1, name: 'лето' },
+    { id: 2, name: 'зима' },
+    { id: 3, name: 'весна' },
+    { id: 4, name: 'осень' },
+    { id: 5, name: 'всесезонный' },
 ]
 
 export const GOODS_COLLECTIONS = [
