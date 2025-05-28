@@ -10,6 +10,7 @@ import {
     GOODS_SEASONS,
     GOODS_SILHOUETTE
 } from "../../../constants/goodsCharacteristics";
+import {NECKLINE} from "../../../constants/goods";
 
 
 export const TShirtsCharacteristics = () => (
@@ -25,10 +26,11 @@ export const TShirtsCharacteristics = () => (
             />
             <SelectInput
                 className='block__select'
-                choices={GOODS_COLLARS}
+                // choices={GOODS_COLLARS}
+                choices={NECKLINE}
                 source='characteristics.collar'
                 validate={[required()]}
-                defaultValue={GOODS_COLLARS[0].name}
+                defaultValue={NECKLINE[0].name}
                 optionValue='name'
             />
             <SelectInput
@@ -73,14 +75,14 @@ export const TShirtsCharacteristics = () => (
                 defaultValue={GOODS_SEASONS[0].name}
                 optionValue='name'
             />
-            <SelectInput
-                className='block__select'
-                choices={GOODS_COLLECTIONS}
-                source='characteristics.collection'
-                validate={[required()]}
-                defaultValue={GOODS_COLLECTIONS[0].name}
-                optionValue='name'
-            />
+            {/*<SelectInput*/}
+            {/*    className='block__select'*/}
+            {/*    choices={GOODS_COLLECTIONS}*/}
+            {/*    source='characteristics.collection'*/}
+            {/*    validate={[required()]}*/}
+            {/*    defaultValue={GOODS_COLLECTIONS[0].name}*/}
+            {/*    optionValue='name'*/}
+            {/*/>*/}
         </div>
     </>
 )
